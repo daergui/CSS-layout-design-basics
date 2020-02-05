@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多列布局的第一种解决方案</title>
+    <style>
+        #parent {
+            /* column-count: 4;
+            column-width: 300px; */
+            columns: 4 300px;
+        }
+        .col1,.col2,.col3,.col4 {
+            height: 100px;
+            
+            
+        }
+        .col1 {
+            background-color: hotpink;
+        }
+        .col2 {
+            background-color: lightblue;
+        }
+        .col3 {
+            background-color: green;
+        }
+        .col4 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        多列布局方案一, css3新属性多列column类型
+        优点:
+            1.简单方便
+            2.间距像素自动分配不用写
+        缺点:
+            1.需要固定像素而不能自适应
+     -->
+    <!-- 作为父级容器 -->
+    <div id="parent">
+        <div class="col1"></div>
+        <div class="col2"></div>
+        <div class="col3"></div>
+        <div class="col4"></div>
+    </div>
+</body>
+</html>

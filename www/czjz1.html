@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #parent {
+            width: 200px;
+            height: 600px;
+            background: #ccc;
+
+            /**
+                display属性:
+                table: 设置当前元素为<table>元素
+                bable-cell: 设置当前元素为<td>元素(单元格)
+            */
+            display: table-cell;
+
+            /*
+                vertical-align: middle;
+                top:顶部
+            */
+            vertical-align: middle;
+        }
+
+        #child {
+            width: 200px;
+            height: 200px;
+            background: #c9394a;
+            
+        }
+    </style>
+</head>
+<body>
+    <!--
+        阅读请知：
+        这个垂直居中的方案是把父元素内的子元素通通都居中了，
+        如果需要有两个以上的div子元素，其中一个居中，那就不能用这个
+    -->
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+</body>
+</html>

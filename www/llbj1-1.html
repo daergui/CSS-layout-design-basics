@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .left {
+            width: 100px;
+            float: left;
+            background: #c9394a;
+            position: relative;
+        }
+        .right-fix {
+            float: right;
+            width: 100%;
+            margin-left: -100px;
+            background-color: aquamarine;
+        }
+        .right {
+            margin-left: 100px;
+            background: #cccccc;
+            clear: both; /**清除浮动*/
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        优点: 
+            1.实现简单，解决了给右浮动clear:both;清除浮动后子元素会塌陷的问题
+            2.llbj1的优化版本
+        缺点: 
+            1自适应元素margin属性值与定宽元素的width属性值保持一致。
+     -->
+    <div class="parent">
+        <div class="left">左 : 定宽</div>
+        <div class="right-fix">
+            <div class="right">右 : 自适应</div>
+        </div>
+    </div>
+</body>
+</html>

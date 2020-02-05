@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>等高布局的第一种解决方案</title>
+    <style>
+        #parent {
+            overflow: hidden;
+        }
+        #left,#right {
+            width: 300px;
+            float: left;
+            padding-bottom: 9999px;
+            margin-bottom: -9999px;
+        }
+        #left {
+            background-color: #c9394a;
+        }
+        #right {
+            background-color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        伪等高布局，两个子元素的高度自适应一致。
+        方案二：浮动形式并且margin、padding大量偏移
+        优点:
+            1. 简单方便
+        缺点:
+            1. margin、padding像素偏移量过大，推荐使用方案一
+        
+     -->
+    <div id="parent">
+        <div id="left">imooc</div>
+        <div id="right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, 
+            voluptas. Quasi harum, nisi tenetur eum perferendis delectus voluptates corporis 
+            quidem itaque tempore eos rerum illum cum deserunt, blanditiis veritatis commodi.</div>
+    </div>
+</body>
+</html>

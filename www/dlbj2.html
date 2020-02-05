@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多列布局的第一种解决方案</title>
+    <style>
+        #parent,#parent2,#parent3 {
+            /* column-count: 4;
+            column-width: 300px; */
+            columns: 4 300px;
+
+            /* 多列属性的间隔值 */
+            column-gap: 20px;
+
+            /* 多列属性的间隔边框样式 */
+            column-rule: 5px tomato solid;
+        }
+        .col1,.col2,.col3,.col4,.col5 {
+            height: 100px;
+            
+            
+        }
+        .col1,.col6 {
+            background-color: hotpink;
+        }
+        .col2, .col7 {
+            background-color: lightblue;
+        }
+        .col3, .col8 {
+            background-color: green;
+        }
+        .col4, .col9 {
+            background-color: yellow;
+        }
+        .col5 {
+            background-color: tomato;
+            /* 横跨所有列，不受上层列属性影响 */
+            column-span: all;
+        }
+        .col6,.col7,.col8,.col9 {
+            /* 以高度最高的子级自动分配给其他子级相同高度 */
+            column-fill: balance;
+            -webkit-column-fill: balance;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        多列布局方案一, css3新属性多列column类型
+        优点:
+            1.简单方便
+            2.可以自适应调整等高高度
+        缺点:
+            1.需要固定像素而不能自适应
+            2.兼容性差，目前少部分属性得到主流浏览器支持，最低要求ie9以上
+     -->
+    <!-- 作为父级容器 -->
+    <div id="parent">
+        <div class="col1"></div>
+        <div class="col2"></div>
+        <div class="col3"></div>
+        <div class="col4"></div>
+    </div>
+    <div id="parent2">
+        <div class="col5"></div>
+    </div>
+    <p></p>
+    <div id="parent3">
+        <div class="col6">
+            Lorem ipsum dolor sit amet consectetur
+             adipisicing elit. Impedit assumenda quasi quas aspernatur
+              voluptates fugiat doloribus atque dolore? Voluptates quam
+
+        </div>
+        <div class="col7">
+            Lorem ipsum dolor sit amet consectetur
+             adipisicing elit. Impedit assumenda quasi quas aspernatur
+              voluptates fugiat doloribus atque dolore? Voluptates quam     
+        </div>
+        <div class="col8">
+            Lorem ipsum dolor sit amet consectetur
+             adipisicing elit. Impedit assumenda quasi quas aspernatur
+              voluptates fugiat doloribus atque dolore? Voluptates quam
+        </div>
+        <div class="col9">
+            imooc
+        </div>
+    </div>
+</body>
+</html>

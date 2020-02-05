@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .left {
+            width: 100px;
+            float: left;
+            background: #c9394a;
+        }
+        .right {
+            background: #cccccc;
+            /* 开启BFC模式 - 当前元素的内部环境与外界完全隔离 */
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        优点: 
+            1.实现简单。
+            2.解决了第一个两列方案的margin值要与.left的width同步的问题
+            2.不需要用clear: both;清除浮动引发问题
+        缺点: 
+            1.因为overflow益出隐藏有些问题出现了结果被隐藏发现不了。
+            2.定宽元素浮动与自适应元素不浮动导致浏览器兼容性不好
+     -->
+    <div class="parent">
+        <div class="left">左 : 定宽</div>
+        <div class="right">右 : 自适应</div>
+    </div>
+</body>
+</html>

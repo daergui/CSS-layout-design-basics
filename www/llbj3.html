@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .parent {
+            display: table;
+            /* 
+                因为表格类型元素宽度默认以子元素来撑开，100%需要手动设置， 
+                table的特性，单元格宽度自动分配，如果一个自定义了宽度，剩下
+                没使用完的宽度按百分比分配给不定义宽度的单元格，实现了自适应
+            */
+            width: 100%;
+
+            /* 这个属性可以解除表格特性对布局的影响，比如边框 */
+            table-layout: fixed;
+        }
+
+        .left, .right {
+            height: 50px;
+            display: table-cell;
+        }
+        .left {
+            width: 400px;
+            background: #c9394a;
+        }
+        .right {
+            background: #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        优点: 
+            1.实现简单
+            2.兼容低版本浏览器
+        缺点: 
+            1.因为设置成表格类型，会有表格特性的影响。
+     -->
+    <div class="parent">
+        <div class="left">左 : 定宽</div>
+        <div class="right">右 : 自适应</div>
+    </div>
+</body>
+</html>

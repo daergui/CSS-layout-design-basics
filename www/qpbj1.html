@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>全屏布局</title>
+    <style>
+        html,body {
+            margin: 0;
+            overflow: hidden;
+        }
+        header {
+            height: 100px;
+            position: fixed;
+
+            /* 可写可不写，为了严谨加上 */
+            top: 0;
+            left: 0;
+            right: 0;
+
+            background-color: lightblue;
+        }
+
+        .content {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 100px;
+            bottom: 100px;
+
+            overflow: auto;
+            background-color: lightskyblue;
+        }
+
+        .content .left {
+            width: 300px;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 100px;
+            bottom: 100px;
+            background-color: lightcoral;
+        }
+
+        .content .right {
+            height: 1000px;
+            margin-left: 300px;
+            background-color: lightgreen;
+        }
+
+        footer {
+            height: 100px;
+            position: fixed;
+
+            /* 可写可不写，为了严谨加上 */
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            background-color: lightslategray;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        全屏布局，固定显示
+        优点:
+            1.适用于手机app和电脑官方后台网站
+        缺点:
+            1.不适用于做电脑和手机之间响应式的网页
+     -->
+
+    <!-- 头部 -->
+    <header></header>
+
+    <!-- 中间内容 -->
+    <div class="content">
+        <!-- 两列布局 -->
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+
+    <!-- 底部 -->
+    <footer></footer>
+</body>
+</html>

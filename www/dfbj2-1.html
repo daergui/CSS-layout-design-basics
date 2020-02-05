@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>等分布局的第一种解决方案</title>
+    <style>
+        #parent {
+            width: 100%;
+            display: table;
+            margin-left: -10px;
+        }
+        .col1,.col2,.col3,.col4 {
+            height: 50px;
+            display: table-cell;
+            /* 改变盒模型规则, 间距像素从宽度本身去减，出现间距的空间 */
+            box-sizing: border-box;
+            padding-left: 10px;
+        }
+        .inner {
+            height: 50px;
+        }
+        .col1 .inner {
+            background-color: hotpink;
+        }
+        .col2 .inner {
+            background-color: lightblue;
+        }
+        .col3 .inner {
+            background-color: green;
+        }
+        .col4 .inner {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        等分布局方案一修改版, 表格类型 + 间距公式
+        优点:
+            1.简单方便
+        缺点:
+            1.需要对父级进行定宽，不适合做间距的自适应
+     -->
+    
+    <div class="parent-fix">
+        <!-- 作为父级容器 -->
+        <div id="parent">
+            <div class="col1">
+                <div class="inner"></div>
+            </div>
+            <div class="col2">
+                <div class="inner"></div>
+            </div>
+            <div class="col3">
+                <div class="inner"></div>
+            </div>
+            <div class="col4">
+                <div class="inner"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

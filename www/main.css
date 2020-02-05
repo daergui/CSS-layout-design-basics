@@ -1,0 +1,98 @@
+
+
+#app {
+    background-color: rgb(244, 245, 245);
+    height: 720px;
+}
+header {
+    height: 51.2px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+header div {
+    font-size: 1.4rem;
+    color: #1890ff;
+    margin-left: 200px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.content {
+    margin-top: 70px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius:10px;
+}
+.left {
+    background-color: #fff;
+    padding: 5px 10px;
+    width: 845px;
+    border-radius:5px;
+}
+.right {
+    width: 865px;
+    height: 40px;
+    background-color: #fff;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:5px;
+    position: relative;
+}
+
+#right-div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+    color: #657180;
+}
+#right-div span:hover {
+    color: #3e76f6;
+}
+#right-div span {
+    animation: gd 1s;
+}
+#flex-container {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0;
+}
+.col {
+    width: 12.5%;
+    padding: 5px;
+    border: 2px solid #0c6;
+    border-radius:5px;
+    flex-basis: calc(20% - 20px);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.col :hover {
+    background-color: rgb(51, 214, 133);
+}
+.col div {
+    text-align: center;
+}
+.col a {
+    color:  #fff;
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+    
+}
+.col div {
+    background-color: #0c6;
+    border-radius:5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+@keyframes gd {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

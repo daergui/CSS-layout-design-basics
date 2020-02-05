@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .parent {
+            height: 50px;
+            margin-left: 300px;
+            margin-right: 300px;
+        }
+
+        .left, .right, .center {
+            height: 50px;
+            float: left;
+        }
+        .left,.right {
+            width: 300px;
+        }
+        .center {
+            background-color: green;
+            width: 100%;
+        }
+        .left {
+            background: #c9394a;
+            margin-left: -100%;
+            position: relative;
+            left: -300px;
+        }
+        .right {
+            background: #cccccc;
+            margin-left: -300px;
+            position: relative;
+            right: -300px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 圣杯布局1的优化版
+        优点: 
+            1.实现简单
+            2.对SEO比较好
+        缺点: 
+            1.代码结构复杂用了浮动多
+     -->
+    <div class="parent">
+        <div class="center">中 : 自适应</div>
+        <div class="left">左 : 定宽</div>
+        <div class="right">右 : 定宽</div>
+    </div>
+</body>
+</html>
+
+圣杯布局核心
+主要是实现中间主体部分的左右定宽+中间自适应的布局效果

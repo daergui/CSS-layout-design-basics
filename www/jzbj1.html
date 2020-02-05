@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #parent {
+            width: 1000px;
+            height: 600px;
+            background: #ccc;
+
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        #child {
+            width: 200px;
+            height: 200px;
+            background: #c9394a;
+
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        阅读请知: 
+        优点: 兼容性好
+        缺点: 同级子元素都居中了
+    -->
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+</body>
+</html>
