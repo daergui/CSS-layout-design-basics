@@ -9,3 +9,5 @@
 启动项目。
 
 然后在浏览器地址栏输入localhost:8080访问, 需要提前准备安装node
+
+![image](https://raw.githubusercontent.com/daergui/CSS-layout-design-basics/master/example.png)
