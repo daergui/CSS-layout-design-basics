@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CSS布局设计基础展示</title>
-    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
     <style>
         html, body {
             margin: 0;
@@ -94,7 +94,11 @@ let arr = [
     {
         name: "全屏布局",
         href: ["qpbj1"]
-    }
+    },
+    {
+        name: "爆布流布局",
+        href: ["bblbj2"]
+    },
 ];
 let fys = document.getElementById("flex-container");
 let y = document.getElementById("right-div");
@@ -123,13 +127,11 @@ function pop_up (e, l) {
      let f = l[e];
      y.innerHTML=`请选择其中一种${f.name}方案:`;
      for(let i = 0; i < f.href.length; i++) {
-        console.log(i)
         y.innerHTML+= `
         &nbsp;&nbsp;<span>${'方案'+['一','二','三'][i]}</span>&nbsp;&nbsp;<a style="color:#d7dde4">/<a/>
         `;
-        console.log(y.getElementsByTagName('span')[i])
         y.getElementsByTagName('span')[i].setAttribute('onclick',`
-            window.open('./${f.href[i]}.html', "_blank", "scrollbars=yes,resizable=1,modal=false,alwaysRaised=yes");
+            window.open('./www/${f.href[i]}.html', "_blank", "scrollbars=yes,resizable=1,modal=false,alwaysRaised=yes");
         `)
         // window.open(`./${f.href[i]}.html', "_blank", "scrollbars=yes,resizable=1,modal=false,alwaysRaised=yes"`);
      }

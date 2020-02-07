@@ -13,7 +13,7 @@ http.createServer((req, res)=>{
             }
         })
     } else {
-        fs.readFile(`./www${pathname}`, (err, data)=> {
+        fs.readFile(`./${pathname}`, (err, data)=> {
             if (err) {
                 res.end('404 无法找到页面')
             }else {
